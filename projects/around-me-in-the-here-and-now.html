@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Around me, in the here and now | Louis Joynt de Fouw</title>
+<meta name="description" content="Accepted application film for the Erasmus Mundus masters programme, DocNomads Plus.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a class="wordmark-group" href="../index.html">
+      <span class="wordmark">Louis Joynt de Fouw</span>
+      <span class="wordmark-role">Videography</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Work</a></li>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="project-head">
+  <div class="wrap">
+    <a class="back" href="../index.html">← All work</a>
+    <h1>Around me, in the here and now</h1>
+    <p class="meta">2025 · DocNomads Plus</p>
+    <p class="desc">Accepted application film for the Erasmus Mundus masters programme, DocNomads Plus.</p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="media-stack">
+      <div class="video-frame">
+        <iframe src="https://www.youtube.com/embed/L1TaUzLUxPc" title="Around me, in the here and now" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <section class="next-up">
+      <h2>More work</h2>
+      <div class="more-list">
+        <a class="more-row" href="adobe-after-effects.html">
+          <span class="more-title">Adobe After Effects</span><span class="more-year">2025</span>
+        </a>
+        <a class="more-row" href="shan-tuyet.html">
+          <span class="more-title">Shan Tuyet Tea Production</span><span class="more-year">2024</span>
+        </a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <button type="button" class="contact-link" id="contact-open">Contact</button>
+    <span class="footer-meta">Dublin, Ireland</span>
+  </div>
+</footer>
+
+<dialog id="contact-dialog">
+  <h2>Contact</h2>
+  <form id="contact-form" class="contact-form">
+    <label>Name
+      <input type="text" name="name" required>
+    </label>
+    <label>Email
+      <input type="email" name="email" required>
+    </label>
+    <label>Message
+      <textarea name="message" rows="5" required></textarea>
+    </label>
+    <div class="dialog-actions">
+      <button type="button" id="contact-cancel">Cancel</button>
+      <button type="submit" class="btn-primary">Send</button>
+    </div>
+  </form>
+</dialog>
+
+<script>
+(function(){
+  var dialog = document.getElementById('contact-dialog');
+  var openBtn = document.getElementById('contact-open');
+  var cancelBtn = document.getElementById('contact-cancel');
+  var form = document.getElementById('contact-form');
+  if(!dialog || !openBtn) return;
+  openBtn.addEventListener('click', function(){ dialog.showModal(); });
+  cancelBtn.addEventListener('click', function(){ dialog.close(); });
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = form.name.value.trim();
+    var email = form.email.value.trim();
+    var message = form.message.value.trim();
+    var subject = encodeURIComponent('Website enquiry from ' + name);
+    var body = encodeURIComponent(message + '\n\nFrom: ' + email);
+    window.location.href = 'mailto:louis@louisjoyntdefouw.com?subject=' + subject + '&body=' + body;
+    dialog.close();
+  });
+})();
+</script>
+
+</body>
+</html>
