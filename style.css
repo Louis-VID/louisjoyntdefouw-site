@@ -88,9 +88,12 @@ a:focus-visible, button:focus-visible{
   border-bottom:1px solid var(--line);
 }
 .eyebrow{
-  color:var(--fg-dim);
-  font-size:0.95rem;
-  margin:0 0 1.25rem;
+  font-family:'Fraunces', serif;
+  font-weight:500;
+  color:var(--fg);
+  font-size:clamp(1.5rem, 4vw, 2.2rem);
+  text-align:center;
+  margin:0 0 1.75rem;
 }
 
 .showreel{
