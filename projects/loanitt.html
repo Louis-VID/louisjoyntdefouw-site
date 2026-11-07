@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Social media work with Loanitt | Louis Joynt de Fouw</title>
+<meta name="description" content="Social media work with Loanitt. Featuring Jockey Danny Mullins and Influencer Sammy Heaney.">
+<link rel="icon" href="../assets/favicon/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16.png">
+<link rel="apple-touch-icon" href="../assets/favicon/apple-touch-icon.png">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a class="wordmark-group" href="../index.html">
+      <span class="wordmark">Louis Joynt de Fouw</span>
+      <span class="wordmark-role">Videography</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Work</a></li>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="project-head">
+  <div class="wrap">
+    <a class="back" href="../index.html">← All work</a>
+    <h1>Social media work with Loanitt</h1>
+    <p class="desc featuring"><em>Featuring Jockey Danny Mullins and Influencer Sammy Heaney</em></p>
+    <p class="meta">2026</p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="media-stack">
+      <div class="video-vertical">
+        <video controls playsinline preload="metadata" poster="../assets/video/danny-sammy-main.jpg">
+          <source src="../assets/video/danny-sammy-main.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="video-vertical">
+        <video controls playsinline preload="metadata" poster="../assets/video/dannys-car-pick.jpg">
+          <source src="../assets/video/dannys-car-pick.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <section class="next-up">
+      <h2>More work</h2>
+      <div class="more-list">
+        <a class="more-row" href="dlr-events.html">
+          <span class="more-title">Imagined Futures: A Live Art Series</span><span class="more-year">2026</span>
+        </a>
+        <a class="more-row" href="shan-tuyet.html">
+          <span class="more-title">Shan Tuyet Tea Production</span><span class="more-year">2024</span>
+        </a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <button type="button" class="contact-link" id="contact-open">Contact</button>
+    <span class="footer-meta">Dublin, Ireland</span>
+  </div>
+</footer>
+
+<dialog id="contact-dialog">
+  <h2>Contact</h2>
+  <form id="contact-form" class="contact-form">
+    <label>Name
+      <input type="text" name="name" required>
+    </label>
+    <label>Email
+      <input type="email" name="email" required>
+    </label>
+    <label>Message
+      <textarea name="message" rows="5" required></textarea>
+    </label>
+    <div class="dialog-actions">
+      <button type="button" id="contact-cancel">Cancel</button>
+      <button type="submit" class="btn-primary">Send</button>
+    </div>
+  </form>
+</dialog>
+
+<script>
+(function(){
+  var dialog = document.getElementById('contact-dialog');
+  var openBtn = document.getElementById('contact-open');
+  var cancelBtn = document.getElementById('contact-cancel');
+  var form = document.getElementById('contact-form');
+  if(!dialog || !openBtn) return;
+  openBtn.addEventListener('click', function(){ dialog.showModal(); });
+  cancelBtn.addEventListener('click', function(){ dialog.close(); });
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = form.name.value.trim();
+    var email = form.email.value.trim();
+    var message = form.message.value.trim();
+    var subject = encodeURIComponent('Website enquiry from ' + name);
+    var body = encodeURIComponent(message + '\n\nFrom: ' + email);
+    window.location.href = 'mailto:louis@louisjoyntdefouw.com?subject=' + subject + '&body=' + body;
+    dialog.close();
+  });
+})();
+</script>
+
+</body>
+</html>

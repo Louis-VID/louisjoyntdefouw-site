@@ -54,9 +54,13 @@ just swap the form's submit handler for a fetch() call to their endpoint.
 index.html                              homepage (showreel, work list, about, contact)
 style.css                               shared styles
 CNAME                                   custom domain for GitHub Pages
-assets/badges/                          festival badge images (add these)
+assets/badges/                          festival badge images
+assets/images/                          tile thumbnails
+assets/video/                           self-hosted videos (keep each under 25MB for browser upload)
+assets/favicon/                         favicon set
 projects/
   dlr-events.html                       Imagined Futures: A Live Art Series
+  loanitt.html                          Social media work with Loanitt
   the-big-sing.html                     The Big Sing
   shan-tuyet.html                       Shan Tuyet Tea Production
   short-content.html                    Short Content
