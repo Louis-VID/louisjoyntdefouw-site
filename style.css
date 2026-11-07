@@ -314,16 +314,10 @@ dialog#contact-dialog h2{
 }
 .video-frame iframe{ position:absolute; inset:0; width:100%; height:100%; border:0; }
 
-/* Vertical (9:16) self-hosted video */
-.video-vertical{
-  width:min(100%, 24rem);
-  aspect-ratio:9/16;
-  margin:0 auto;
-  background:#000;
-  border:1px solid var(--line);
-}
-.video-vertical video{
-  display:block; width:100%; height:100%; object-fit:contain; background:#000;
+/* Self-hosted video inside the standard 16:9 frame (vertical clips sit centered) */
+.video-frame video{
+  position:absolute; inset:0; width:100%; height:100%;
+  object-fit:contain; background:transparent; display:block;
 }
 .project-head .featuring{ margin:0.25rem 0 1.2rem; }
 
